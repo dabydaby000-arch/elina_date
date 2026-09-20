@@ -1,0 +1,450 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    font-family: Tahoma, Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #ffd6e7 0%,
+            #f8a9c4 45%,
+            #ee82ad 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+
+/* -------------------------
+   برنامه اصلی
+------------------------- */
+
+.app {
+    position: relative;
+
+    width: 90%;
+    max-width: 650px;
+
+    min-height: 500px;
+
+    padding: 60px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px rgba(180, 30, 90, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 5;
+}
+
+
+/* -------------------------
+   عنوان
+------------------------- */
+
+h1 {
+    font-size: 32px;
+
+    margin-bottom: 50px;
+
+    color: white;
+
+    text-shadow:
+        0 3px 10px rgba(120, 0, 50, 0.25);
+}
+
+
+/* -------------------------
+   دکمه ها
+------------------------- */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: Tahoma, Arial, sans-serif;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* دکمه سلام */
+
+#helloButton {
+    width: 220px;
+    height: 65px;
+
+    border-radius: 35px;
+
+    background: #ec407a;
+
+    color: white;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(150, 20, 70, 0.3);
+}
+
+
+#helloButton:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    background: #d81b60;
+
+    box-shadow:
+        0 15px 30px rgba(150, 20, 70, 0.4);
+}
+
+
+#helloButton:active {
+    transform: scale(0.96);
+}
+
+
+/* -------------------------
+   متن سوال
+------------------------- */
+
+.question {
+    font-size: 27px;
+
+    font-weight: bold;
+
+    color: #880e4f;
+
+    margin: 35px 0;
+}
+
+
+/* -------------------------
+   دکمه های آره و نه
+------------------------- */
+
+.buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.yes {
+    width: 180px;
+    height: 60px;
+
+    border-radius: 30px;
+
+    background: #ec407a;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(150, 20, 70, 0.3);
+}
+
+
+.yes:hover {
+    transform: scale(1.06);
+
+    background: #d81b60;
+}
+
+
+.no {
+    width: 90px;
+    height: 40px;
+
+    border-radius: 25px;
+
+    background: #f48fb1;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+.no:hover {
+    transform: scale(1.05);
+}
+
+
+/* -------------------------
+   تقویم
+------------------------- */
+
+#calendarSection h2 {
+    color: white;
+
+    font-size: 23px;
+
+    margin-bottom: 30px;
+}
+
+
+#calendarSection input {
+    display: block;
+
+    width: 230px;
+
+    height: 48px;
+
+    margin: 12px auto;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: white;
+
+    color: #880e4f;
+
+    font-size: 17px;
+
+    text-align: center;
+}
+
+
+#confirmButton {
+    margin-top: 25px;
+
+    width: 260px;
+
+    height: 55px;
+
+    border-radius: 30px;
+
+    background: #ec407a;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(150, 20, 70, 0.3);
+}
+
+
+#confirmButton:hover {
+    transform: translateY(-3px);
+
+    background: #d81b60;
+}
+
+
+/* -------------------------
+   صفحه نهایی
+------------------------- */
+
+#finalSection h2 {
+    font-size: 28px;
+
+    color: white;
+
+    margin: 20px 0;
+}
+
+
+#finalSection p {
+    font-size: 21px;
+
+    color: #880e4f;
+
+    font-weight: bold;
+}
+
+
+.heart {
+    font-size: 75px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+
+/* -------------------------
+   انیمیشن قلب
+------------------------- */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* -------------------------
+   اکلیل ها
+------------------------- */
+
+.sparkles {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.sparkles::before,
+.sparkles::after {
+    content: "✦  ·  ✧  ·  ✦  ·  ✧";
+
+    position: absolute;
+
+    top: -50px;
+
+    left: 0;
+
+    width: 100%;
+
+    color: white;
+
+    font-size: 20px;
+
+    letter-spacing: 25px;
+
+    opacity: 0.8;
+
+    animation:
+        falling 7s linear infinite;
+}
+
+
+.sparkles::after {
+    animation-delay: 3.5s;
+
+    font-size: 14px;
+
+    opacity: 0.6;
+}
+
+
+@keyframes falling {
+
+    from {
+        transform:
+            translateY(-100px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(180deg);
+    }
+}
+
+
+/* -------------------------
+   مخفی کردن بخش ها
+------------------------- */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* -------------------------
+   نمایش روی گوشی
+------------------------- */
+
+@media (max-width: 600px) {
+
+    .app {
+        width: 92%;
+
+        min-height: 500px;
+
+        padding: 40px 20px;
+
+        border-radius: 30px;
+    }
+
+
+    h1 {
+        font-size: 24px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .question {
+        font-size: 22px;
+    }
+
+
+    .yes {
+        width: 150px;
+    }
+
+
+    .no {
+        width: 80px;
+    }
+}
